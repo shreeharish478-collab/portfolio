@@ -1135,10 +1135,9 @@ footer{
     <textarea name="message" class="form-textarea" placeholder="Tell me about your project, idea, or opportunity..." required/></textarea>
   </div>
 
- <button class="form-submit" onclick="submitForm(this)">
+ <button type="submit" class="form-submit" id="submitBtn">
     Send Message →
 </button>
-     
 </form>
 </section>
 
@@ -1269,14 +1268,15 @@ function buildContribGrid(){
 buildContribGrid();
 
 // ---- CONTACT FORM ----
-function submitForm(btn){
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  setTimeout(()=>{
+const form = document.querySelector('form');
+const btn = document.getElementById('submitBtn');
+  form.addEventListener('submit', function() {
+ setTimeout(()=>{
     btn.textContent = '✓ Message Sent — I\'ll be in touch!';
     btn.style.background = '#28C840';
+    btn.disabled = true;
   },1500);
-}
+});
 
 // ---- PARALLAX ----
 window.addEventListener('scroll',()=>{
