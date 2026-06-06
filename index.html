@@ -1112,27 +1112,34 @@ footer{
     <p class="contact-sub reveal reveal-delay-2">Open to internships, freelance projects, collaborations, and interesting conversations about technology.</p>
     <div class="contact-links reveal reveal-delay-2">
       <a href="https://github.com/shreeharish478-collab" target="_blank" class="contact-link">⚡ GitHub</a>
-      <a href="https://mail.google.com/mail/" target="_blank" class="contact-link"> 📧 harishhaxr@gmail.com </a>
+      <a href="mailto:harishhaxr@gmail.com" target="_blank" class="contact-link"> 📧 harishhaxr@gmail.com </a>
       <a href="#" class="contact-link">💼 LinkedIn</a>
     </div>
-    <div class="contact-form reveal reveal-delay-3">
-      <div form action="https://formsubmit.co/harishhaxr@gmail.com" method="POST">
-      <div class="form-row">
-        <label class="form-label">Your Name</label>
-        <input type="text" class="form-input" placeholder="Who are you?" required />
-      </div>
-      <div class="form-row">
-        <label class="form-label">Email Address</label>
-        <input type="email" class="form-input" placeholder="your@email.com" required />
-      </div>
-      <div class="form-row">
-        <label class="form-label">Message</label>
-        <textarea class="form-textarea" placeholder="Tell me about your project, idea, or opportunity..." /> </textarea>
-      </div>
-      <button class="form-submit" onclick="submitForm(this)">Send Message →</button>
-      </form></div>
-    </div>
+   <form action="https://formsubmit.co/harishhaxr@gmail.com" method="POST">
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Portfolio Message">
+
+  <div class="form-row">
+    <label class="form-label">Your Name</label>
+    <input type="text" name="name" class="form-input" placeholder="Who are you?" required/>
   </div>
+
+  <div class="form-row">
+    <label class="form-label">Email Address</label>
+    <input type="email" name="email" class="form-input" placeholder="your@email.com" required/>
+  </div>
+
+  <div class="form-row">
+    <label class="form-label">Message</label>
+    <textarea name="message" class="form-textarea" placeholder="Tell me about your project, idea, or opportunity..." required/></textarea>
+  </div>
+
+ <button class="form-submit" onclick="submitForm(this)">
+    Send Message →
+</button>
+     
+</form>
 </section>
 
 <!-- FOOTER -->
